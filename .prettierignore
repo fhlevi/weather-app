@@ -1,0 +1,7 @@
+.vscode
+node_modules
+dist
+public
+yarn.lock
+package-lock.json
+vite-env.d.ts
