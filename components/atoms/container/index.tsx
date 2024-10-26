@@ -2,14 +2,15 @@ import { z } from 'zod';
 
 const ContainerSchema = z.object({
   children: z.any(),
+  style: z.object({})
 });
 
 type SchemaProps = z.infer<typeof ContainerSchema>;
 
-export const Container = ({ children }: SchemaProps) => {
+export const Container = ({ children, style }: SchemaProps) => {
   return (
-    <div className="py-8 h-screen w-full">
-      <div className="max-w-[421px] mx-auto h-full">{children}</div>
+    <div className="w-full whole-container" style={style}>
+      <div className="h-full w-full">{children}</div>
     </div>
   );
 };

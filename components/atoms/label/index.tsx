@@ -6,6 +6,7 @@ const LabelSchema = z
     children: z.any(),
     color: z.enum(['primary', 'default', 'midnight']),
     size: z.string(),
+    style: z.any(),
     className: z.string(),
   })
   .partial({
@@ -19,8 +20,9 @@ type SchemaProps = z.infer<typeof LabelSchema>;
 export const Label = ({
   children,
   color = 'default',
-  size = '16px',
+  size = '',
   className,
+  style,
   ...props
 }: SchemaProps) => {
   const colors = {
@@ -34,6 +36,7 @@ export const Label = ({
       className={cn(colors, className)}
       style={{
         fontSize: size,
+        ...style
       }}
       {...props}>
       {children}
