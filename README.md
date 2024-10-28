@@ -1,4 +1,4 @@
-# Front-end React + Vite
+# The Weather React + Vite
 
 [React.js](https://react.dev/) 
 [Vite](https://vitejs.dev/) 
@@ -24,7 +24,8 @@
 ├── 📂 components/
 │   ├── * atoms
 │   ├── * molecules
-│   └── * organisms
+│   ├── * organisms
+│   └── * templates
 ├── 📂 hooks
 ├── 📂 public
 ├── 📂 styles
@@ -53,9 +54,8 @@ Notes:
 ## File & Folder Naming
 
 - In general, **kebab-case** is prefered for folder & file naming.
-- Use **kebab-case** and **.js** extension for react component file naming.  
-  You can create component file directly like `some-component.js`, or create a folder `some-component/index.js`.
-- Use **kebab-case** and **.spec.js** for test file naming.
+- Use **kebab-case** and **.ts** extension for react component file naming.  
+  You can create component file directly like `some-component.ts`, or create a folder `some-component/index.ts`.
 
 ## Tools
 

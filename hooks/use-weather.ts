@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { clear, cloudy, rainy, snowy } from "@/constants/background";
 
 export const useWeather = () => {
   const [cityInput, setCityInput] = useState<string>('JAKARTA');
@@ -58,15 +59,15 @@ export const useWeather = () => {
     const code = weatherData?.weather[0].id;
 
     if (code === 800) {
-      return `url(../assets/images/${timeOfDay}/clear.jpg)`;
+      return clear[timeOfDay];
     } else if (code >= 801 && code <= 804) {
-      return `url(../assets/images/${timeOfDay}/cloudy.jpg)`;
+      return cloudy[timeOfDay];
     } else if (code >= 500 && code <= 531) {
-      return `url(../assets/images/${timeOfDay}/rainy.jpg)`;
+      return rainy[timeOfDay];
     } else if (code >= 600 && code <= 622) {
-      return `url(../assets/images/${timeOfDay}/snowy.jpg)`;
+      return snowy[timeOfDay];
     } else {
-      return `url(../assets/images/${timeOfDay}/default.jpg)`;
+      return 'white'
     }
   };
 

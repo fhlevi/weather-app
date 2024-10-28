@@ -15,7 +15,7 @@ export const WeatherApp = () => {
   return (
     <Container
       style={{
-        backgroundImage,
+        backgroundImage: `url(${backgroundImage})`,
         opacity: loading ? 0 : 1,
       }}>
       <WeatherContent
