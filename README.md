@@ -3,7 +3,7 @@
 [React.js](https://react.dev/) 
 [Vite](https://vitejs.dev/) 
 
-[Demo](https://todo-alpha-list.vercel.app/)
+[Demo](https://weather-alpha-23.vercel.app/)
 
 ## Getting Started
 
